@@ -8,14 +8,16 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    @if (session('status'))
+                    @if (Auth::check())
                         <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
+                            You are logged!
+                        </div>                        
+                    @else
+                        You are not logged!
                     @endif
-
-                    You are logged in!                    
+                    
                 </div>
+                
             </div>
         </div>
     </div>
